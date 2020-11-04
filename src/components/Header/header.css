@@ -1,0 +1,26 @@
+header {
+  width: 85%;
+  padding: 15px;
+  background: linear-gradient(#f6f6f6, #dfdede);
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(97, 93, 93);
+  margin-bottom: 20px;
+}
+
+header span {
+  font-weight: 600;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
