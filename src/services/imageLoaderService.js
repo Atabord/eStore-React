@@ -20,7 +20,7 @@ import Repollo from '../imagenesBase/repollo.jpg';
 import Tomate from '../imagenesBase/tomate.jpg';
 import Zanahoria from '../imagenesBase/zanahoria.jpg';
 
-export default {
+const imageLoaderService = {
   aguacate: Aguacate,
   ajo: Ajo,
   almendras: Almendras,
@@ -42,4 +42,6 @@ export default {
   repollo: Repollo,
   tomate: Tomate,
   zanahoria: Zanahoria,
-}
+};
+
+export default imageLoaderService;

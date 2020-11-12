@@ -5,12 +5,12 @@ import Home from '../Home/Home';
 
 function Main() {
  return(
-   <>
+   <div className="main">
     <Header />
     <div className="content">
       <Home/>
     </div>
-   </>
+   </div>
  )
 }
 

@@ -1,15 +1,15 @@
-html {
-  height: 100%;
-}
-body {
+.login {
   background-image: url('../../imagenesBase/login-fondo.jpg');
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.layer {
+.login .layer {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   top: 0;
@@ -22,27 +22,27 @@ body {
   align-content: center;
 }
 
-.form-container {
+.login .form-container {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-form {
+.login form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-input {
+.login input {
   width: 500px;
   height: 30px;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
-input[type=submit] {
+.login input[type=submit] {
   width: auto;
   height: auto;
   background-color: rgb(96, 184, 96);
@@ -51,13 +51,13 @@ input[type=submit] {
   font-weight: 600;
 }
 
-label {
+.login label {
   align-self: flex-start;
   margin-bottom: 7px;
   font-weight: 600;
 }
 
-.error {
+.login .error {
   color: red;
   font-weight: 400;
 }
