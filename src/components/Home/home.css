@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.products-container {
+  overflow-y: scroll;
+  height: 750px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

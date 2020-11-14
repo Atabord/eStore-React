@@ -1,41 +1,20 @@
-.card {
-  border: 2px solid lightgray;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px;
-}
-
-img {
-  width: 240px;
-  height: 150px;
-}
-
-.card p {
-  font-size: 14px;
-}
-
-.card footer{
+.product-info {
   display: flex;
-  /* margin-bottom: 10px; */
-  justify-content: space-between;
+}
+.product-info img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 400px;
 }
 
-.card button {
+.back-button {
   padding: 10px;
   border-radius: 5px;
   font-weight: 700;
-  color: white;
-}
-
-.card footer input {
-  padding: 10px 3px;
-  margin-left: 3px;
-}
-
-.detailsButton {
-  background-color: rgb(56, 141, 197);
-}
-
-.addButton {
-  background-color: rgb(207, 182, 73);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  border: 1px solid grey;
+  cursor: pointer;
 }
