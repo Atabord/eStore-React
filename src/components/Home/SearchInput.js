@@ -40,7 +40,7 @@ function SearchInput({ products, onSearch }) {
         <div className="autocomplete">
           {
             products.map((product) =>(
-              <div className="autocomplete-item">
+              <div className="autocomplete-item" key={`autocomplete-${product.nombre}`}>
                 <p onClick={onProductClick}>{product.nombre}</p>
               </div>)
             )}

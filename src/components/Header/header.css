@@ -12,6 +12,7 @@ header {
 
 header span {
   font-weight: 600;
+  font-size: 20px;
 }
 
 nav ul {
@@ -22,5 +23,33 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 15px;
+  margin-right: 25px;
+}
+
+.nav-button {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-button {
+  position: relative;
+}
+
+.notificacion {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  background-color: red;
+  height: 18px;
+  width: 18px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notificacion span {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
 }

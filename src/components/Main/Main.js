@@ -9,26 +9,29 @@ import {
   useRouteMatch
 } from 'react-router-dom';
 import Product from '../Product/Product';
+import { CartProvider } from '../Cart/cart-context';
 
 function Main() {
   const { path  } = useRouteMatch();
 
  return(
-   <div className="main">
-    <Header />
-    <div className="content">
-      <Router>
-        <Switch>
-          <Route exact path={path}>
-            <Home/>
-          </Route>
-          <Route path="/producto/:nombre">
-            <Product/>
-          </Route>
-        </Switch>
-      </Router>
+   <CartProvider>
+    <div className="main">
+      <Header />
+      <div className="content">
+        <Router>
+          <Switch>
+            <Route exact path={path}>
+              <Home/>
+            </Route>
+            <Route path="/producto/:nombre">
+              <Product/>
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </div>
-   </div>
+   </CartProvider>
  )
 }
 
