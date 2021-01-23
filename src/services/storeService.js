@@ -1,8 +1,10 @@
 
+const DB_URL = 'https://atabord-nextu-final.firebaseio.com';
+
 const storeService = {
   getProducts: async () => {
     try {
-      const products = await (await fetch('https://atabord-nextu-final.firebaseio.com/productos.json')).json();
+      const products = await (await fetch(`${DB_URL}/productos.json`)).json();
       return products
     } catch (error) {
       return [];
@@ -11,7 +13,7 @@ const storeService = {
 
   getProduct: async(name) => {
     try {
-      const products = await (await fetch('https://atabord-nextu-final.firebaseio.com/productos.json')).json();
+      const products = await (await fetch(`${DB_URL}/productos.json`)).json();
       return products.find(product => product.nombre === name);
     } catch (error) {
       return {};
@@ -20,10 +22,10 @@ const storeService = {
 
   buyProducts: async(products) => {
     try {
-      const store = await (await fetch('https://atabord-nextu-final.firebaseio.com/productos.json')).json();
+      const store = await (await fetch(`${DB_URL}/productos.json`)).json();
       await Promise.allSettled(products.map(async (product) => {
         const storeIndex = store.findIndex(storeProduct => storeProduct.nombre === product.nombre);
-        await fetch(`https://atabord-nextu-final.firebaseio.com/productos/${storeIndex}.json`, {
+        await fetch(`${DB_URL}/productos/${storeIndex}.json`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json'
