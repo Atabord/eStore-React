@@ -1,0 +1,39 @@
+.cart-content {
+  overflow-y: scroll;
+  max-height: 750px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-content > div {
+  width: 50%;
+  max-height: 700px;
+}
+
+.cart-list {
+  list-style: none;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 0;
+}
+
+.cart-list li {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-list li+li {
+  border-top: 1px solid lightgray;
+}
+
+.cart-list li img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.cart-info {
+  padding-left: 50px;
+}

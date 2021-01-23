@@ -12,7 +12,6 @@ function Product () {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
 
-
   useEffect(() => {
     async function getData () {
       setLoading(true);
@@ -44,7 +43,7 @@ function Product () {
             <p><strong>Unidades disponibles:</strong> {product.inventario}</p>
           </div>
         </div>
-        <button className="back-button" onClick={onBackButtonClick}>Atras</button>
+        <button className="common-button" onClick={onBackButtonClick}>Atras</button>
       </>
     )
   } else if(loading){

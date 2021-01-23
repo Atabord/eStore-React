@@ -10,7 +10,9 @@ header {
   margin-bottom: 20px;
 }
 
-header span {
+header a {
+  text-decoration: none;
+  color: rgb(97, 93, 93);
   font-weight: 600;
   font-size: 20px;
 }

@@ -2,6 +2,8 @@ import React, { createContext, useContext, useReducer } from 'react';
 
 const CartContext = createContext({});
 
+const initialState = {nItems: 0, items: []}
+
 function cartReducer(state, action) {
   switch(action.type){
       case 'add':
@@ -13,6 +15,10 @@ function cartReducer(state, action) {
                 action.payload
               ]
           }
+      case 'reset':
+        return {
+          ...initialState
+        };
       default:
           throw new Error(`Unsupported action type: ${action.type}`)
   }
@@ -25,15 +31,17 @@ function useCart() {
   }
   const [ cartState, cartDispatch ] = context;
   const addToCart = (item) => cartDispatch({ type: 'add', payload: item });
+  const resetCart = () => cartDispatch({ type: 'reset'});
   return {
     cartState,
     cartDispatch,
     addToCart,
+    resetCart,
   }
 }
 
 function CartProvider(props) {
-  const [state, dispatch] = useReducer(cartReducer, {nItems: 0, items: []});
+  const [state, dispatch] = useReducer(cartReducer, initialState);
   const value = React.useMemo(() => [state, dispatch], [state]);
   return <CartContext.Provider value={value} {...props} />
 }
